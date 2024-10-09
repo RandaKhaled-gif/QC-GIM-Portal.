@@ -4,15 +4,20 @@ import io.paysky.qc.GlobalProperties;
 import io.paysky.qc.utilities.selenium.DriverFactory;
 import io.paysky.qc.utilities.testdata.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 public class LoginPage {
 
     private WebDriver driver;
 
-    public void LoginURL() {
+    public LoginPage() {
         driver = DriverFactory.getDriver();
+    }
+
+    public void LoginURL() {
         driver.get(GlobalProperties.getProperty("Login_main_URL"));
     }
 
@@ -55,6 +60,11 @@ public class LoginPage {
         driver.findElement(By.id("UserName")).clear();
         driver.findElement(By.id("userpassword")).clear();
         Thread.sleep(5000);
+    }
+
+    public  void Reload_page(){
+        Actions actions = new Actions(driver);
+        actions.keyDown(Keys.CONTROL).sendKeys("r").keyUp(Keys.CONTROL).perform();
     }
 
 }

@@ -8,6 +8,10 @@ public class Logout {
 
     private WebDriver driver;
 
+    public Logout() {
+        driver = DriverFactory.getDriver();
+    }
+
     public void Log_out() throws InterruptedException {
         driver = DriverFactory.getDriver();
         driver.findElement(By.id("navbarDropdown")).click();

@@ -1,4 +1,5 @@
 package io.paysky.qc;
+
 import io.paysky.qc.pages.*;
 import io.paysky.qc.pages.Login.LoginPage;
 import io.paysky.qc.pages.Logout.Logout;
@@ -13,9 +14,6 @@ public class LoginTest {
     final OnboardingPage onboardingPage = new OnboardingPage();
     final LoginPage loginPage = new LoginPage();
     final Logout logoutPage = new Logout();
-
-    public LoginTest() {
-    }
 
     @org.testng.annotations.Test(priority = 1)
     @Description("Check that the user can login with valid credentials")
@@ -51,8 +49,4 @@ public class LoginTest {
         loginPage.Invalid_OTP_Login_with_admin_user();
     }
 
-    @AfterTest
-    void Close_driver(){
-        logoutPage.Close_Driver_After_Test();
-    }
 }

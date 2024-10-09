@@ -1,8 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="GIM-Portal">
-    <test name="GIM-Portal-Collection">
+    <test name="Login" verbose="1">
         <classes>
             <class name="io.paysky.qc.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Change-Password" verbose="2">
+        <classes>
+            <class name="io.paysky.qc.Change_password_test"/>
         </classes>
     </test>
     <listeners>
