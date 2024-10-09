@@ -3,7 +3,6 @@ package io.paysky.qc;
 import io.paysky.qc.pages.Change_password.Change_password;
 import io.paysky.qc.pages.Login.LoginPage;
 import io.paysky.qc.pages.Logout.Logout;
-import io.paysky.qc.pages.OnboardingPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
 import io.qameta.allure.Owner;
@@ -12,7 +11,6 @@ import io.qameta.allure.testng.Tag;
 public class Change_password_test {
 
     final LoginPage loginPage = new LoginPage();
-    final Logout logoutPage = new Logout();
     final Change_password ChangePassword = new Change_password();
 
     @org.testng.annotations.Test(priority = 1)
