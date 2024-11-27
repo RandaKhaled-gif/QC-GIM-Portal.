@@ -1,11 +1,14 @@
-package org.example.Pages.PaymentOrder;
+package io.paysky.qc.pages.PaymentOrder;
 
-import org.example.Utilits.ConfigReader;
-import org.example.Utilits.DataFaker;
+import io.paysky.qc.utilities.ConfigReader;
+import io.paysky.qc.utilities.DataFaker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CreatePaymentOrder {
     public WebDriver driver;
@@ -26,7 +29,7 @@ public class CreatePaymentOrder {
     By EmailField = By.id("Email");
     By NumberOfPayment = By.id("MaxNumberOfPayment");
     By saveButton = By.id("btnSave");
-    By PayButton = By.xpath("//button[normalize-space()='Pay']");
+    By PayButton = By.xpath("//button[contains(.,'Payer')]");
     By CardNumberField = By.id("cc-number");
     By ExpiryDateField = By.id("inputExpiration");
     By CvvField = By.id("inputCVV");
@@ -75,7 +78,20 @@ public class CreatePaymentOrder {
         //To open in new tab
         ((JavascriptExecutor) driver).executeScript("window.open(arguments[0], '_blank');", hrefValue);
     }
-    public void clickPayButton(){ driver.findElement(PayButton).click(); }
+
+    public void clickPayButton(){
+        String originalTab = driver.getWindowHandle();
+        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // Switch to the new tab (assuming it's the second tab)
+        for (String tab : tabs) {
+            if (!tab.equals(originalTab)) {
+                driver.switchTo().window(tab);
+                break;
+            }
+        }
+            driver.findElement(PayButton).click();
+    }
+
     public void EnterLightBoxData(){
         driver.findElement(CardNumberField).sendKeys();
         driver.findElement(ExpiryDateField).sendKeys();
