@@ -1,9 +1,9 @@
-package org.example.Tests;
+package io.paysky.qc;
 
 import com.opencsv.exceptions.CsvException;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.example.Pages.LoginPage;
-import org.example.Utilits.CSVUtilits;
+import io.paysky.qc.pages.LoginPage;
+import io.paysky.qc.utilities.CSVUtilits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
@@ -37,7 +37,7 @@ public class LoginDataTest {
       return data;
     }
     @Test(dataProvider = "LoginDataCSV")
-    public void TestLoginWithDataFromCSV(String username , String password){
+    public void TestLoginWithDataFromCSV(String username , String password) throws InterruptedException {
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickSendOtpButton();

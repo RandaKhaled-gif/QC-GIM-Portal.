@@ -1,10 +1,9 @@
-package org.example.Utilits;
+package io.paysky.qc.utilities;
 
 import net.datafaker.Faker;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class DataFaker {
     public final Faker faker;
