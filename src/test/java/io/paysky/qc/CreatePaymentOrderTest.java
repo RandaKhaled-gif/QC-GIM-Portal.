@@ -1,7 +1,7 @@
-package org.example.Tests;
+package io.paysky.qc;
 
-import org.example.Pages.PaymentOrder.CreatePaymentOrder;
-import org.example.Utilits.DataFaker;
+import io.paysky.qc.pages.PaymentOrder.CreatePaymentOrder;
+import io.paysky.qc.utilities.DataFaker;
 import org.testng.annotations.Test;
 
 public class CreatePaymentOrderTest extends BaseTest{
@@ -42,7 +42,7 @@ public class CreatePaymentOrderTest extends BaseTest{
         Thread.sleep(1000);
         createPaymentOrder.clickSaveButton();
         Thread.sleep(10000);
-       createPaymentOrder.clickPaymentURL();
+        createPaymentOrder.clickPaymentURL();
         Thread.sleep(1000);
         createPaymentOrder.clickPayButton();
         Thread.sleep(5000);
