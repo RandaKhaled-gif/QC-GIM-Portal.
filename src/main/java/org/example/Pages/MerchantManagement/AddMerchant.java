@@ -38,6 +38,12 @@ public class AddMerchant {
     By MerchantUserEmail = By.id("MerchantUserEmail");
     By PortalLoginUsername = By.id("select2-MerchantUserNameSelectedType-container");
     By SelectMerchantId = By.xpath("//option[. = 'Merchant ID']");
+    By EmptyArea = By.xpath("//div[@id='step-4']/div[3]/div/div/div/div/div[2]/div[3]");
+    By NotificationMethod = By.id("select2-NotificationId-container");
+    By SelectEmail = By.xpath("//option[. = 'Email']");
+    By NextButton4 = By.xpath("//div[@id='step-4']/div[5]/button");
+    By SelectFileButton = By.id("document");
+    By SaveButton = By.id("btnSave");
     public void clickAddIcon() {
         driver.findElement(AddIcon).click();
     }
@@ -92,5 +98,13 @@ public class AddMerchant {
     }
     public void clickPortalLoginUsername(){ driver.findElement(PortalLoginUsername).click(); }
     public void selectMerchantId(){ driver.findElement(SelectMerchantId).click(); }
+    public void clickEmptyArea(){ driver.findElement(EmptyArea).click();}
+    public void clickNotificationMethod(){ driver.findElement(NotificationMethod).click(); }
+    public void selectEmail(){ driver.findElement(SelectEmail).click(); }
+    public void clickNextButton4(){driver.findElement(NextButton4).click(); }
+    public void uploadFile(String file){
+        driver.findElement(SelectFileButton).sendKeys(file);
+    }
+    public void clickSaveButton(){driver.findElement(SaveButton).click();}
 
 }
