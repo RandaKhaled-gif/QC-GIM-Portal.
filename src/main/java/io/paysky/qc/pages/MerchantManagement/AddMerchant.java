@@ -1,7 +1,7 @@
-package org.example.Pages.MerchantManagement;
+package io.paysky.qc.pages.MerchantManagement;
 
-import org.example.Utilits.ConfigReader;
-import org.example.Utilits.DataFaker;
+import io.paysky.qc.utilities.ConfigReader;
+import io.paysky.qc.utilities.DataFaker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

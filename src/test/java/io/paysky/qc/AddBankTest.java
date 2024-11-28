@@ -1,13 +1,8 @@
-package org.example.Tests;
+package io.paysky.qc;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.example.Pages.BankManagement.AddBankPage;
-import org.example.Pages.HomeDashboard;
-import org.example.Pages.LoginPage;
-import org.example.Utilits.DataFaker;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
+import io.paysky.qc.pages.BankManagement.AddBankPage;
+import io.paysky.qc.pages.HomeDashboard;
+import io.paysky.qc.utilities.DataFaker;
 import org.testng.annotations.Test;
 
 public class AddBankTest extends BaseTest {

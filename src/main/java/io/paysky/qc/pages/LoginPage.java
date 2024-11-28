@@ -1,11 +1,10 @@
-package org.example.Pages;
+package io.paysky.qc.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static io.paysky.qc.utilities.sharedComponent.SharedComponent.waitUntilVisible;
 
 public class LoginPage {
     public WebDriver driver;
@@ -32,7 +31,8 @@ public class LoginPage {
         driver.findElement(sendOtpButton).click();
     }
 
-    public void enterOtp(String otp){
+    public void enterOtp(String otp) throws InterruptedException {
+        java.lang.Thread.sleep(2000);
         driver.findElement(otpField).sendKeys(otp);
     }
     public void clickSignInButton(){

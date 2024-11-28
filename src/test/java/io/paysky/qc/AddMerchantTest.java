@@ -1,8 +1,8 @@
-package org.example.Tests;
+package io.paysky.qc;
 
-import org.example.Pages.HomeDashboard;
-import org.example.Pages.MerchantManagement.AddMerchant;
-import org.example.Utilits.DataFaker;
+import io.paysky.qc.pages.HomeDashboard;
+import io.paysky.qc.pages.MerchantManagement.AddMerchant;
+import io.paysky.qc.utilities.DataFaker;
 import org.testng.annotations.Test;
 
 public class AddMerchantTest extends BaseTest {

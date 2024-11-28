@@ -1,4 +1,4 @@
-package org.example.Utilits;
+package io.paysky.qc.utilities;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
