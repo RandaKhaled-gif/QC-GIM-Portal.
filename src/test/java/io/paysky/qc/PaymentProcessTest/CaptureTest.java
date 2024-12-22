@@ -14,7 +14,7 @@ public class CaptureTest extends BaseTest {
     public void ValidCaptureProcess() throws InterruptedException {
         CaptureProcess captureProcess  = new CaptureProcess(driver);
         CreatePaymentOrder createPaymentOrder = new CreatePaymentOrder(driver);
-        loginWithValidData();
+        loginWithValidDataInFrench();
         Thread.sleep(10000);
         createPaymentOrder.Payment();
         captureProcess.scrollToCaptureButton();

@@ -7,14 +7,13 @@ import Utilits.DataFaker;
 import org.testng.annotations.Test;
 
 public class CancellationTest extends BaseTest {
-    DataFaker faker;
     CancellationProcess cancellationProcess;
     CreatePaymentOrder createPaymentOrder;
     @Test
     public void ValidCancellationProcess() throws InterruptedException {
-        CancellationProcess cancellationProcess  = new CancellationProcess(driver);
-        CreatePaymentOrder createPaymentOrder = new CreatePaymentOrder(driver);
-        loginWithValidData();
+         cancellationProcess  = new CancellationProcess(driver);
+         createPaymentOrder = new CreatePaymentOrder(driver);
+        loginWithValidDataInFrench();
         Thread.sleep(10000);
         createPaymentOrder.Payment();
         cancellationProcess.scrollToCancellationButton();

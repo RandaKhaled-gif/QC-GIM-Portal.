@@ -1,21 +1,19 @@
 package io.paysky.qc.MerchantManagementTest;
 
-import io.paysky.qc.pages.HomeDashboard;
+import io.paysky.qc.pages.HomeDashboard.Home;
 import io.paysky.qc.pages.MerchantManagement.AddMerchant;
 import org.example.QC.BaseTest;
 import Utilits.DataFaker;
 import org.testng.annotations.Test;
 
 public class AddMerchantTest extends BaseTest {
-    HomeDashboard homeDashboard ;
+    Home homeDashboard ;
     AddMerchant addMerchant;
-    DataFaker faker;
     @Test
     public void validAddNewMerchant() throws InterruptedException {
-        HomeDashboard homeDashboard =  new HomeDashboard(driver);
-        AddMerchant addMerchant = new AddMerchant(driver);
-        DataFaker faker = new DataFaker(driver);
-        loginWithValidData();
+         homeDashboard =  new Home(driver);
+         addMerchant = new AddMerchant(driver);
+        loginWithValidDataInFrench();
         Thread.sleep(10000);
         homeDashboard.clickMerchantTab();
         homeDashboard.clickMerchantSubTab();

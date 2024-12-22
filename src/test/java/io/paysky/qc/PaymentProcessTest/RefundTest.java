@@ -8,7 +8,6 @@ import Utilits.DataFaker;
 import org.testng.annotations.Test;
 
 public class RefundTest extends BaseTest {
-    DataFaker faker;
     RefundProcess refundProcess;
     CreatePaymentOrder createPaymentOrder;
     @Test
@@ -16,7 +15,7 @@ public class RefundTest extends BaseTest {
         CaptureProcess captureProcess  = new CaptureProcess(driver);
         RefundProcess refundProcess  = new RefundProcess(driver);
         CreatePaymentOrder createPaymentOrder = new CreatePaymentOrder(driver);
-        loginWithValidData();
+        loginWithValidDataInFrench();
         Thread.sleep(10000);
         createPaymentOrder.Payment();
         captureProcess.scrollToCaptureButton();

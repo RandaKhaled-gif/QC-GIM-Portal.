@@ -12,7 +12,7 @@ public class CreatePaymentOrderTest extends BaseTest {
     @Test
     public void ValidPaymentOrder() throws InterruptedException {
         CreatePaymentOrder createPaymentOrder = new CreatePaymentOrder(driver);
-        loginWithValidData();
+        loginWithValidDataInFrench();
         Thread.sleep(10000);
         createPaymentOrder.ClickValueAddedServicesTab();
         Thread.sleep(10000);
