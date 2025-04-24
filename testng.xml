@@ -5,12 +5,22 @@
 <!--            <class name="org.example.QC.LoginTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
-    <test name="Create_Payment_Order" verbose="2">
+    <test verbose="1" name="LisClearingFileTest">
         <classes>
-            <class name="io.paysky.qc.PaymentProcessTest.CreatePaymentOrderTest"/>
+            <class name="io.paysky.qc.SettlementReportTest.LisClearingFileTest"/>
         </classes>
     </test>
-    <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-    </listeners>
-</suite>
+    <test verbose="2" name="ZipExtractorTest">
+        <classes>
+            <class name="io.paysky.qc.SettlementReportTest.ZipExtractorTest"/>
+        </classes>
+    </test>
+    <test verbose="3" name="FileNameValidatorTest">
+        <classes>
+            <class name="io.paysky.qc.SettlementReportTest.FileNameValidatorTest"/>
+        </classes>
+    </test>
+    <!--    <listeners>
+            <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        </listeners> -->
+    </suite>
